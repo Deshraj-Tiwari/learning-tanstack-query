@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Provider from "@/utils/Providers";
 
 const ubuntu = Ubuntu({ weight: "500", subsets: ["latin"] });
 
@@ -18,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={ubuntu.className}>
         <main className="flex justify-center items-center h-screen">
-          {children}
+          <Provider>{children}</Provider>
         </main>
       </body>
     </html>
